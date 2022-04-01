@@ -1,0 +1,29 @@
+
+<div align="center" width ="100%" style="background-color:cornflowerblue;
+ height:70px; color: white">
+    <app-enfant user="Stacker Angular"></app-enfant> 
+    <!--Transmission d'information entre les composants -->
+</div>
+
+<br>
+<div align="center" style="font-weight:bold; font-size:12px; margin-left:2%; margin-right:2%">Avec cette application, les rechauffements à 
+    chaud sont autorisés. Nous avons également utilisé une API 
+    qui permet de renvoyer des données Fake via le service implementé. 
+    Nous avons aussi réutilisé le composant <code>app-enfant</code> en
+     y transmettant une chaine "Stacker Angular"
+</div>
+
+<div class="corps">
+    <h2 *ngIf="FetchedData"> Fake Data >>>> </h2>
+
+    <div class="droite">
+        <ul>
+            <li *ngFor="let fetcheddata of FetchedData">
+                   ID : {{fetcheddata.id}}
+                   Description : {{fetcheddata.title}}
+                   Prix : {{fetcheddata.price}}
+               </li>
+           </ul>
+    </div>
+</div>
+
